@@ -3,32 +3,30 @@
         <div class="galleryBox">
 
 
-
-
             <ion-item collection-repeat="item in gallery" item-width="48%"
                       item-height="200px">
-
-                <div class="card card-gallery item item-text-wrap ">
-                    <div class="ink dark-bg">
-                        <h2>{{item.title}}</h2>
-                        <img class="full-image" ng-src="{{item.imgSrc}}">
-                    </div>
-                    <div class="item tabs tabs-secondary tabs-icon-left">
-                        <a class="tab-item stable-bg assertive">
-                            <i class="icon ion-heart"></i>
-                          {{item.likeCount}}
-                        </a>
-                        <a class="tab-item stable-bg positive-900" ng-click="showInput('zoomInDown')">
-                            <i class="icon ion-chatbubbles"></i>
-                            {{item.commentCount}}
-                        </a>
+                <div class="animate-fade-slide-in">
+                    <div class="item card-item">
+                        <div class="card card-gallery item item-text-wrap ">
+                            <div class="ink dark-bg">
+                                <h2>{{item.title}}</h2>
+                                <img class="full-image" ng-src="{{item.imgSrc}}">
+                            </div>
+                            <div class="item tabs tabs-secondary tabs-icon-left">
+                                <a class="tab-item stable-bg assertive">
+                                    <i class="icon ion-heart"></i>
+                                    {{item.likeCount}}
+                                </a>
+                                <a class="tab-item stable-bg positive-900" ng-click="showInput('zoomInDown')">
+                                    <i class="icon ion-chatbubbles"></i>
+                                    {{item.commentCount}}
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
             </ion-item>
-
-
-
 
 
         </div>

@@ -1,19 +1,26 @@
 <ion-view view-title="chat" ng-controller="chatCtrl" style="background-image: url('img/seeside.jpeg');">
 
-    <div style="margin-top: 48px;" >
-        <div class="item item-avatar item-icon-right" >
-            <img ng-src="{{currentChat.imgSrc}}">
+    <div style="margin-top: 48px;">
+        <div class="animate-fade-slide-in">
+            <div class="item card-item">
+                <div class="item item-avatar item-icon-right">
+                    <img ng-src="{{currentChat.imgSrc}}">
 
-            <h2>{{currentChat.name}}</h2>
+                    <h2>{{currentChat.name}}</h2>
 
-            <p>{{currentChat.word}}</p>
+                    <p>{{currentChat.word}}</p>
+                </div>
+            </div>
         </div>
         <div id="chatDisplay">
 
         </div>
+
+
         <form action="" ng-submit="chatSubmit()" onsubmit="return false">
             <input type="text" ng-model="inputContent">
         </form>
+         
     </div>
 
 </ion-view>

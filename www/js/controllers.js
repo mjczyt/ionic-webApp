@@ -192,9 +192,12 @@ angular.module('starter.controllers', [])
         ionicMaterialMotion.pushDown({
             selector: '.push-down'
         });
-        ionicMaterialMotion.fadeSlideInRight({
-            selector: '.animate-fade-slide-in .item'
-        });
+
+        $timeout(function () {
+            ionicMaterialMotion.fadeSlideIn({
+                selector: '.animate-fade-slide-in .item'
+            });
+        }, 200);
 
         $scope.gallery = [{
             id: 0,
@@ -260,14 +263,15 @@ angular.module('starter.controllers', [])
         $scope.$parent.setExpanded(false);
         $scope.$parent.setHeaderFab(false);
 
+
+        $timeout(function () {
+            ionicMaterialMotion.fadeSlideIn({
+                selector: '.animate-fade-slide-in .item'
+            });
+        }, 200);
         ionicMaterialInk.displayEffect();
 
-        ionicMaterialMotion.pushDown({
-            selector: '.push-down'
-        });
-        //ionicMaterialMotion.fadeSlideInRight({
-        //    selector: '.animate-fade-slide-in .item'
-        //});
+
 
         $scope.currentChat = currentChat;
         $scope.chatSubmit = function () {
