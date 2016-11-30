@@ -1,0 +1,34 @@
+<ion-view view-title="Profile" ng-controller="ProfileCtrl">
+    <ion-content ng-class="{expanded:$scope.isExpanded}">
+        <div class="hero slide-up" style="background-image: url('img/profile-bg.jpg');">
+            <div class="content">
+                <div class="avatar" style="background-image: url('img/dog.jpeg');"></div>
+                <h3><a class="light">Daenerys Targaryen</a></h3>
+                <h4>dragon_mommy</h4>
+            </div>
+        </div>
+        <div class="tabs tabs-dark tabs-icon-top static">
+            <a ui-sref="app.activity" class="tab-item">
+                <i class="icon ion-arrow-graph-up-right"></i> Activity
+            </a>
+            <a ui-sref="app.friends" class="tab-item">
+                <i class="icon ion-android-people"></i> Friends
+            </a>
+            <a ui-sref="app.gallery" class="tab-item">
+                <i class="icon ion-images"></i> Photos
+            </a>
+        </div>
+        <h4 class="content padding double-padding-x" style="margin-bottom: 0px;">Following</h4>
+
+        <div class="list animate-fade-slide-in-right">
+            <ion-item collection-repeat="item in chatList" ng-click="startChat(item)">
+                <a ui-sref="app.chat" class="item item-avatar item-icon-right" >
+                    <img ng-src="{{item.imgSrc}}">
+                    <h2>{{item.name}}</h2>
+                    <p>{{item.word}}</p>
+                    <i class="icon ion-chatbubble muted"></i>
+                </a>
+            </ion-item>
+        </div>
+    </ion-content>
+</ion-view>

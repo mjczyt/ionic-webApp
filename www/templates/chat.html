@@ -1,0 +1,19 @@
+<ion-view view-title="chat" ng-controller="chatCtrl">
+
+    <div style="margin-top: 48px;" >
+        <div class="item item-avatar item-icon-right" >
+            <img ng-src="{{currentChat.imgSrc}}">
+
+            <h2>{{currentChat.name}}</h2>
+
+            <p>{{currentChat.word}}</p>
+        </div>
+        <div id="chatDisplay">
+
+        </div>
+        <form action="" ng-submit="chatSubmit()" onsubmit="return false">
+            <input type="text" ng-model="inputContent">
+        </form>
+    </div>
+
+</ion-view>
