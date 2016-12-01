@@ -90,10 +90,7 @@ p {
     flex-wrap: wrap;
 }
 
-.galleryBox  .card-gallery {
-    width: 100%;
-    box-shadow: 5px 5px 11px darkgrey;
-}
+
 
 .popup-buttons > .button {
     font-size: 2px;
@@ -142,11 +139,9 @@ p {
     margin-top:5px;
     font-family: "Helvetica Neue", "Roboto", sans-serif;
 }
-.galleryBox .collection-repeat-container{
-    width:100%;
-}
+
 .galleryBox .collection-repeat-container ion-item{
     border:none;
-    padding:4px;
+    padding:1px;
     padding-right:14px;
 }
